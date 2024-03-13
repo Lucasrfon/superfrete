@@ -1,0 +1,22 @@
+# Projeto Test Collection
+
+O projeto segue um padrão de design separando as functions dos triggers, onde as operações são acionadas por eventos no Firestore. A função `onNewRecordCreated` é acionada sempre que um novo documento é criado na coleção `test_collection`. Ela verifica se o documento possui dados e, em seguida, atribui um `increment_id` baseado no último ID disponível na coleção.
+
+## Fazendo requisições
+
+O projeto contém um end-point para request do tipo POST.
+É esperado um body em JSON com um atributo 'name'.
+Rota para requisição: http://localhost:5001/superfrete-fonseca/us-central1/addRecord
+
+## Pré-requisitos
+
+Antes de começar, certifique-se de ter o seguinte instalado:
+- Node.js
+- npm
+- Firebase CLI
+
+## Instalação
+
+Para instalar as dependências do projeto, execute o seguinte comando no diretório functions:
+
+npm install
